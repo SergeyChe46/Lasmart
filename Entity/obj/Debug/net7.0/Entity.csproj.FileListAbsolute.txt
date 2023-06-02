@@ -1,0 +1,12 @@
+/home/sergeyche/Projects/C_Sharp/Lasmart/Entity/bin/Debug/net7.0/Entity.deps.json
+/home/sergeyche/Projects/C_Sharp/Lasmart/Entity/bin/Debug/net7.0/Entity.dll
+/home/sergeyche/Projects/C_Sharp/Lasmart/Entity/bin/Debug/net7.0/Entity.pdb
+/home/sergeyche/Projects/C_Sharp/Lasmart/Entity/obj/Debug/net7.0/Entity.csproj.AssemblyReference.cache
+/home/sergeyche/Projects/C_Sharp/Lasmart/Entity/obj/Debug/net7.0/Entity.GeneratedMSBuildEditorConfig.editorconfig
+/home/sergeyche/Projects/C_Sharp/Lasmart/Entity/obj/Debug/net7.0/Entity.AssemblyInfoInputs.cache
+/home/sergeyche/Projects/C_Sharp/Lasmart/Entity/obj/Debug/net7.0/Entity.AssemblyInfo.cs
+/home/sergeyche/Projects/C_Sharp/Lasmart/Entity/obj/Debug/net7.0/Entity.csproj.CoreCompileInputs.cache
+/home/sergeyche/Projects/C_Sharp/Lasmart/Entity/obj/Debug/net7.0/Entity.dll
+/home/sergeyche/Projects/C_Sharp/Lasmart/Entity/obj/Debug/net7.0/refint/Entity.dll
+/home/sergeyche/Projects/C_Sharp/Lasmart/Entity/obj/Debug/net7.0/Entity.pdb
+/home/sergeyche/Projects/C_Sharp/Lasmart/Entity/obj/Debug/net7.0/ref/Entity.dll

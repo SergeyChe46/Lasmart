@@ -1,0 +1,54 @@
+﻿@page
+@using Entity
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+@* @section Scripts{
+    <script type="text/javascript" src="~/js/point-getter.js"></script>
+} *@
+
+<div class="text-center">
+    <form method="POST">
+        <input type="number" placeholder="X coords" id="xCoord" name="xCoord">
+        <input type="number" placeholder="Y coords" id="yCoord" name="yCoord">
+        <input type="number" placeholder="Radius" id="radius" name="radius">
+        <label for="color"></label>
+        <select name="color" id="color">
+            <option value="red">Red</option>
+            <option value="green">Green</option>
+            <option value="blue">Blue</option>
+            <option value="yellow">Yellow</option>
+        </select>
+        <div>
+            <a href="#" id="addComment" onclick="addComment()">Добавить комментарий</a>
+            <input type="text" id="comments" asp-for-comment="comments">
+            <div id="comments"/>
+        </div>
+        <button type="submit">Create</button>
+    </form>    
+</div>
+<div>
+    @if (Model.Points != null)
+    {
+        @foreach (Point point in Model.Points)
+        {
+            <span id="container"> 
+                @point.Color
+                @if (point.Comments != null){
+                    @foreach (string com in point.Comments)
+                    {
+                        <span>@com</span>
+                    }
+                }
+                else{<span>NoComments</span>} 
+                <button onclick='newCircle(@point.XCoord, @point.YCoord, @point.Radius, "@point.Color")'>CLICK</button>
+            </span>
+        }
+     }
+    else
+    {
+        <div>There are no points</div>
+    }
+</div>
