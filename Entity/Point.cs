@@ -13,7 +13,6 @@ namespace Entity
         [Range(1, int.MaxValue)]
         public float XCoord { get; set; }
         [Range(1, int.MaxValue)]
-
         public float YCoord { get; set; }
         [Range(1, int.MaxValue)]
 

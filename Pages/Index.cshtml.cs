@@ -12,13 +12,10 @@ public class IndexModel : PageModel
     private readonly RepositoryManager _repoManager;
     [BindProperty]
     public Point Point { get; set; }
-    [BindProperty]
-    public string Comment { get; set; }
     public IndexModel(ILogger<IndexModel> logger, RepositoryManager manager)
     {
         _logger = logger;
         _repoManager = manager;
-        // Points = _repoManager.Points.GetAll().ToList();
     }
 
     public List<Point>? Points;
@@ -28,8 +25,9 @@ public class IndexModel : PageModel
         Points = _repoManager.Points.GetAll().ToList();
     }
 
-    public IActionResult OnPost(string comment)
+    public IActionResult OnPost()
     {
+        System.Console.WriteLine(Point.Comments[0] ?? "null");
         _repoManager.Points.CreateAsync(Point);
         _repoManager.Save();
         return RedirectToPage();

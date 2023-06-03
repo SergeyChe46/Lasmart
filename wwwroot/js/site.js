@@ -24,7 +24,8 @@ function addComment(){
     var comments = document.getElementById("comments");
     var input = document.createElement("input");
     input.name = "comments";
-    comments.appendChild(document.createTextNode("Комментарий"));
+    //input.className = "form-control"
+    // comments.appendChild(document.createTextNode("Комментарий"));
     comments.appendChild(input);
-    comments.appendChild(document.createElement("br"));
+    // comments.appendChild(document.createElement("br"));
 }

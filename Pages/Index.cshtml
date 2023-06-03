@@ -14,17 +14,16 @@
         <input type="number" placeholder="X coords" id="xCoord" name="xCoord">
         <input type="number" placeholder="Y coords" id="yCoord" name="yCoord">
         <input type="number" placeholder="Radius" id="radius" name="radius">
-        <label for="color"></label>
         <select name="color" id="color">
-            <option value="red">Red</option>
+            <option value="red" selected>Red</option>
             <option value="green">Green</option>
             <option value="blue">Blue</option>
             <option value="yellow">Yellow</option>
         </select>
-        <div>
+        <div id="comments">
             <a href="#" id="addComment" onclick="addComment()">Добавить комментарий</a>
-            <input type="text" id="comments" asp-for-comment="comments">
-            <div id="comments"/>
+            <input type="text" id="comments" asp-for="Point.Comments[0]">
+            <div />
         </div>
         <button type="submit">Create</button>
     </form>    
@@ -34,21 +33,15 @@
     {
         @foreach (Point point in Model.Points)
         {
-            <span id="container"> 
-                @point.Color
-                @if (point.Comments != null){
-                    @foreach (string com in point.Comments)
-                    {
-                        <span>@com</span>
-                    }
-                }
-                else{<span>NoComments</span>} 
+                <span> 
+                    @(point.Comments == null ? point.XCoord : point.Comments[0].Length.ToString())
                 <button onclick='newCircle(@point.XCoord, @point.YCoord, @point.Radius, "@point.Color")'>CLICK</button>
-            </span>
+                </span>
         }
-     }
+        <div id="container"></div>
+    }
     else
     {
-        <div>There are no points</div>
+        <div>Создайте новую точку</div>
     }
 </div>
